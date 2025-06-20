@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search Simulator </title>
+</head>
+
+<body>
+    <script>
+        function searchBook(bookName, callback) {
+            console.log(`Searching for "${bookName}"...`);
+
+            setTimeout(() => {
+
+                let result = `Book titled "${bookName}" was found!`;
+                callback(result);
+            }, 2000);
+        }
+
+        searchBook("The Alchemist", function (result) {
+            console.log(result);
+        });
+    </script>
+
+</body>
+
+</html>

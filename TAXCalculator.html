@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAX Calculator</title>
+</head>
+<body>
+    <script>
+        function calculateTax(amount, ...taxRates) {
+  let totalTax = 0;
+  for (let rate of taxRates) {
+    totalTax += (amount * rate) / 100;
+  }
+  return amount + totalTax;
+}
+
+// Example usage:
+let result = calculateTax(100, 12, 18); // 100 + 12% + 18%
+console.log("Amount after tax:", result);
+
+    </script>
+</body>
+</html>
